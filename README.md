@@ -29,7 +29,7 @@ function Mod:load(data, new_file, slot)
   
   if save then
     -- Use the Deltarune save name
-    self.save_name = save.name
+    Game.save_name = save.name
     -- Print whether you've beaten Jevil
     print("Beaten up a clown: " .. tostring(save.beat_jevil))
   end
