@@ -105,13 +105,14 @@ function DeltaruneLoader.getSaveDirectory()
 
         local home = os.getenv("HOME")
         local winePath = home .. "/.wine/drive_c/users/" .. os.getenv("USER") .. "/Local Settings/Application Data/DELTARUNE/"
+        -- I THINK the numbers it is the same in all systems
+        -- Source: https://store.steampowered.com/app/1690940 (You will get redirected to deltarune) 
+        local steamPath = home .. "/.steam/steam/steamapps/compatdata/1690940/pfx/drive_c/users/steamuser/AppData/Local/DELTARUNE/"
 
         if file_exists(winePath) then -- Get the path from WINE
             return winePath
-        elseif file_exists(home .. "/.steam/debian-installation/steamapps/common/") then -- Get the path from steam
-            -- I THINK the app ID it is the same in all systems, i'm gonna keep this as a variable in case if it is not
-            -- Source: https://store.steampowered.com/app/1690940 (You will get redirected to deltarune) 
-            return home .. "/.steam/steam/steamapps/compatdata/1690940/pfx/drive_c/users/steamuser/AppData/Local/DELTARUNE/"
+        elseif file_exists(steamPath) then -- Get the path from steam
+            return steamPath
         end
     end
 end
