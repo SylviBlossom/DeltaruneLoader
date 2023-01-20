@@ -92,6 +92,28 @@ function DeltaruneLoader.getSaveDirectory()
         return string.gsub(os.getenv("LOCALAPPDATA"), "\\", "/") .. "/Deltarune/"
     elseif os_name == "OS X" then
         return os.getenv("HOME") .. "/Library/Application Support/com.tobyfox.deltarune/"
+    elseif os_name == "Linux" then
+        -- Tested on: Linux mint, should probably work on all Debian based systems
+        -- I know this code is bad
+
+        -- love.filesystem won't read stuff outside of the game
+        local function file_exists(file)
+            local f = io.open(file, "rb")
+            if f then f:close() end
+            return f ~= nil
+        end
+
+        local home = os.getenv("HOME")
+        local winePath = home .. "/.wine/drive_c/users/" .. os.getenv("USER") .. "/Local Settings/Application Data/DELTARUNE/"
+        -- I THINK the numbers it is the same in all systems
+        -- Source: https://store.steampowered.com/app/1690940 (You will get redirected to deltarune) 
+        local steamPath = home .. "/.steam/steam/steamapps/compatdata/1690940/pfx/drive_c/users/steamuser/AppData/Local/DELTARUNE/"
+
+        if file_exists(winePath) then -- Get the path from WINE
+            return winePath
+        elseif file_exists(steamPath) then -- Get the path from steam
+            return steamPath
+        end
     end
 end
 
