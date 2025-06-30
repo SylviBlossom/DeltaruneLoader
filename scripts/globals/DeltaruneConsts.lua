@@ -33,7 +33,18 @@ DeltaruneConsts.ITEM_IDS = {
     [30] = "revivedust",
     [31] = "revivebrite",
     [32] = "s_poison",
-    [33] = "dogdollar"
+    [33] = "dogdollar",
+    [34] = "tvdinner",
+    [35] = "pipis",
+    [36] = "flatsoda",
+    [37] = "tvslop",
+    [38] = "execbuffet",
+    [39] = "deluxedinner",
+    --random 21 item id jump i guess
+    [60] = "ancientsweet",
+    [61] = "rhapsotea",
+    [62] = "scarlixir",
+    [63] = "bittertear",
 }
 
 DeltaruneConsts.KEY_ITEM_IDS = {
@@ -76,7 +87,17 @@ DeltaruneConsts.WEAPON_IDS = {
     [19] = "ragger2",
     [20] = "brokenswd",
     [21] = "puppetscarf",
-    [22] = "freezering"
+    [22] = "freezering",
+    [23] = "saber10",
+    [24] = "toxicaxe",
+    [25] = "flexscarf",
+    [26] = "blackshard",
+    --another jump, weird
+    [50] = "jingleblade",
+    [51] = "scarfmark",
+    [52] = "justiceaxe",
+    [53] = "winglade",
+    [54] = "absorbax"
 }
 
 DeltaruneConsts.ARMOR_IDS = {
@@ -101,7 +122,18 @@ DeltaruneConsts.ARMOR_IDS = {
     [19] = "spikeshackle",
     [20] = "frayedbowtie",
     [21] = "dealmaker",
-    [22] = "royalpin"
+    [22] = "royalpin",
+    [23] = "shadowmantle",
+    [24] = "lodestone",
+    [25] = "gingerguard",
+    [26] = "blueribbon",
+    [27] = "tennatie",
+    --actually maybe they just wanted ch4's items to start at 50 because. ???
+    [50] = "waferguard",
+    [51] = "mysticband",
+    [52] = "powerband",
+    [53] = "princessrbn",
+    [54] = "goldwidow"
 }
 
 DeltaruneConsts.LIGHT_ITEM_IDS = {
@@ -118,9 +150,12 @@ DeltaruneConsts.LIGHT_ITEM_IDS = {
     [11] = "light/glass",
     [12] = "light/eraser",
     [13] = "light/mech_pencil",
-    [14] = "light/wristwatch"
+    [14] = "light/wristwatch",
+    [15] = "light/holiday_pencil",
+    [16] = "light/cactusneedle",
+    [17] = "light/blackshard",
+    [18] = "light/quillpen"
 }
-
 DeltaruneConsts.ROOM_IDS = {
     [  3] = "Queen's Mansion - Rooftop",
     [ 27] = "Kris's Room",
@@ -160,8 +195,35 @@ DeltaruneConsts.ROOM_IDS = {
     [391] = "Card Castle - ???",
     [394] = "Card Castle - 1F",
     [403] = "Card Castle - 5F",
-    [406] = "Card Castle - Throne"
+    [406] = "Card Castle - Throne",
+    [30097] = "Dark World",
+    [30108] = "Cold Place",
+    [301340] = "Green Room",
+    [30155] = "Dark World?",
+    [30178] = "Goulden Sam",
+    [30195] = "TV World - Before the Show",
+    [30196] = "TV World - Entrance",
+    [30209] = "TV World - Concert",
+    [40014] = "Kris's Room",
+    [40023] = "Hometown",
+    [40048] = "Noelle's House",
+    [40064] = "Castle Town",
+    [40065] = "My Castle Town",
+    [40108] = "Dark Sanctuary - Atrium",
+    [40115] = "Dark Sanctuary - Study",
+    [40177] = "Dark Sanctuary - Lower Left",
+    [40219] = "Dark Sanctuary - Small Piano",
+    [40220] = "Dark Sanctuary - Library",
+    [40229] = "Dark Sanctuary - Lower Right",
+    [40248] = "2nd Sanctuary - Atrium",
+    [40252] = "2nd Sanctuary - Floor",
+    [40258] = "2nd Sanctuary - Study",
+    [40271] = "3rd Sanctuary",
+    [40278] = "3rd Sanctuary - Stairs",
+    [40281] = "3rd Sanctuary - Last Chamber",
+    [40322] = "MIKE ZONE"
 }
+
 
 DeltaruneConsts.TEAM_NAMES = {
     [0] = "Guys",

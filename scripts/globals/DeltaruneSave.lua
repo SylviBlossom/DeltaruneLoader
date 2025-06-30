@@ -50,6 +50,8 @@ function DeltaruneSave:init(chapter, slot, completed)
     self.shadow_crystals = 0
     self.beat_jevil = false
     self.beat_spamton = false
+    self.beat_knight = false
+    self.beat_gerson = false
 
     self.starwalker = false
 
@@ -268,6 +270,8 @@ function DeltaruneSave:parseData(data)
 
     self.eggs[1] = self:getFlag(263, "number") >= 2
     self.eggs[2] = self:getFlag(439, "boolean")
+    self.eggs[3] = self:getFlag(930,"boolean")
+    self.eggs[4] = self:getFlag(931,"boolean")
 
     if self:getFlag(241, "number") >= 6 then
         self.beat_jevil = true
@@ -275,6 +279,14 @@ function DeltaruneSave:parseData(data)
     end
     if self:getFlag(309, "number") >= 9 then
         self.beat_spamton = true
+        self.shadow_crystals = self.shadow_crystals + 1
+    end
+    if self:getFlag(1047, "number") == 1 then
+        self.beat_knight = true
+        self.shadow_crystals = self.shadow_crystals + 1
+    end
+    if self:getFlag(1688, "number") >= 1 then
+        self.beat_gerson = true
         self.shadow_crystals = self.shadow_crystals + 1
     end
 

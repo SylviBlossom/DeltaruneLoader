@@ -1,7 +1,7 @@
 local DeltaruneLoader = {}
 local self = DeltaruneLoader
 
-DeltaruneLoader.CHAPTERS = 2
+DeltaruneLoader.CHAPTERS = 4
 
 
 function DeltaruneLoader.init()
